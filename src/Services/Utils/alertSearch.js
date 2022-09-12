@@ -3,7 +3,8 @@ import { getcompany } from "../Api/getCompany";
 
 export const search = () => {
   return Swal.fire({
-    title: "Search",
+    title: "Ingrese el NIT",
+    icon: "question",
     input: "text",
     inputValue: "",
   }).then(async (res) => {

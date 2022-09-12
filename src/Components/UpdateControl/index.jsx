@@ -1,6 +1,7 @@
 import { FaRegTrashAlt, FaSave, FaRegTimesCircle } from "react-icons/fa";
 import { updateCompany } from "../../Services/Api/updateCompany";
 import { deleteCompany } from "../../Services/Api/deleteCompany";
+import { confirmAlert } from "../../Services/Utils/confirmAlert";
 
 const emptyData = {
   name: "",
@@ -23,9 +24,13 @@ export const UpdateControl = ({ data, setData, setRegister }) => {
       <div
         className="fa-icon-container"
         onClick={() => {
-          deleteCompany(data.nit);
-          setRegister(true);
-          setData(emptyData);
+          confirmAlert().then((result) => {
+            if (result.isConfirmed) {
+              deleteCompany(data.nit);
+              setRegister(true);
+              setData(emptyData);
+            }
+          });
         }}
       >
         <FaRegTrashAlt className="fa-icon" />

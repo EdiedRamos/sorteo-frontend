@@ -26,4 +26,12 @@
   input::placeholder {
     color: $light-cyan-200;
   }
+
+  .disabled {
+    background-color: $dark-blue;
+  }
+
+  .disabled:hover {
+    outline: 0;
+  }
 }

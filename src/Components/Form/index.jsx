@@ -22,6 +22,7 @@ export const Form = ({ data, handleChange, register }) => {
         name="nit"
         placeholder="NIT"
         value={data.nit}
+        className={register ? "" : "disabled"}
         onChange={register ? handleChange : () => {}}
         disabled={!register}
       />

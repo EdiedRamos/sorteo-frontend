@@ -9,10 +9,15 @@
 }
 
 body {
-  // display: flex;
-  // justify-content: center;
-  // align-items: center;
   min-height: 100vh;
   background-color: $dark-grayish-blue;
   padding: 1rem;
+}
+
+@media (min-width: 768px) {
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 }

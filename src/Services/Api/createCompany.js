@@ -10,16 +10,17 @@ function post(data) {
   })
     .then((result) => result.json())
     .then((res) => {
-      messageSwal(res.message);
-      return res.message.includes("ya");
+      const error = res.message.includes("ya");
+      messageSwal(res.message, error ? "error" : "success");
+      return error;
     });
 }
 
 export const createCompany = (data) => {
   for (const key of Object.keys(data)) {
     if (!data[key].trim()) {
-      messageSwal("Ingrese todos los datos");
-      return;
+      messageSwal("Ingrese todos los datos", "warning");
+      return new Promise((_, reject) => reject("Datos incompletos"));
     }
   }
   return post(data);
