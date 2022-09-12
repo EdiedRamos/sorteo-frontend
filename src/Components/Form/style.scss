@@ -1,0 +1,29 @@
+@import "../../Styles/index.scss";
+
+.form-register {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: $dark-grayish-blue;
+  border-radius: $border-radius $border-radius 0 0;
+  padding: 1rem;
+
+  input {
+    background-color: $grayish-blue;
+    border: 0;
+    margin: 10px 0;
+    color: $dark-blue;
+    padding: 8px;
+    border-radius: $border-radius;
+    color: $light-cyan-100;
+  }
+
+  input:focus,
+  input:hover {
+    outline: 2px solid $dark-blue;
+  }
+
+  input::placeholder {
+    color: $light-cyan-200;
+  }
+}

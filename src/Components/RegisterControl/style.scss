@@ -1,0 +1,36 @@
+@import "../../Styles/index.scss";
+
+.icons-container {
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+  background-color: $dark-blue;
+  border-radius: 50% 50% 0 0;
+}
+
+.fa-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background-color: $neon-green;
+  margin: 0 10px;
+  border-radius: $border-radius;
+  padding: 5px;
+}
+
+.fa-icon {
+  width: 30px;
+  height: 30px;
+  color: $dark-blue;
+}
+
+.fa-icon-container:hover {
+  filter: drop-shadow(0 0 5px $neon-green);
+  cursor: pointer;
+}
+
+.fa-icon-container:active {
+  transform: scale(0.9);
+}
