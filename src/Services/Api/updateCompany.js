@@ -1,7 +1,7 @@
 import { messageSwal } from "../Utils/messageSwal";
 
 function put(data) {
-  fetch(`http://127.0.0.1:8000/api/companies/${data.nit}`, {
+  fetch(`https://sorteo-backend.herokuapp.com/api/companies/${data.nit}`, {
     method: "PUT",
     body: JSON.stringify(data),
     headers: {
